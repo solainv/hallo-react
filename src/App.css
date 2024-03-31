@@ -1,0 +1,181 @@
+
+.App {
+  max-width: 300px;
+  margin: 0 auto;
+  padding: 18px;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Schatten für den äußeren Rahmen des Formulars */
+  border-radius: 10px;
+  margin: 10px auto;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  appearance: none; /* Entfernt die native Dropdown-Pfeilanzeige */
+  transition: background-color 0.3s ease; /* Hinzufügen einer Übergangseffekt für den Hintergrund */
+}
+
+/* Styling für das Hover-Verhalten */
+select:hover {
+  border-color: #999;
+}
+
+/* Styling für den Fokus-Zustand */
+select:focus {
+  outline: none;
+  border-color: #66ccff; /* Beispielhafte Farbe für den Fokus */
+  box-shadow: 0 0 3px rgba(102, 204, 255, 0.5); /* Beispielhafte Schatten für den Fokus */
+}
+
+/* Styling für die Dropdown-Optionen */
+select option {
+  padding: 8px;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 4px;
+  font-size: 14px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Schatten für die Input-Felder */
+}
+
+/* Dunklerer Hintergrund, wenn das Input-Feld fokussiert ist */
+input[type="text"]:focus,
+input[type="number"]:focus,
+select:focus {
+  background-color: #f5f5f5; /* Dunklerer Hintergrundfarbe für fokussierte Input-Felder */
+}
+
+/* Dunklerer Hintergrund, wenn über das Input-Feld gescrollt wird */
+input[type="text"]:hover,
+input[type="number"]:hover,
+select:hover {
+  background-color: #f0f0f0; /* Dunklerer Hintergrundfarbe für gehoverte Input-Felder */
+  transition: background-color 0.3s ease;
+}
+
+/* Styling für Input-Felder mit Platzhalter */
+input::placeholder {
+  color: #999; /* Leichtere Farbe für den Platzhalter */
+  font-size: 12px; /* Verkleinern Sie die Schriftgröße des Platzhalters */
+  font-style: italic; /* Setzen Sie den Stil des Platzhalters auf kursiv */
+}
+
+/* Verstecke den Platzhalter, wenn das Input-Feld fokussiert ist */
+input:focus::placeholder {
+  color: transparent; /* Setze die Farbe des Platzhalters auf transparent */
+}
+
+/* Button-Styling */
+.prediction-button {
+  position: relative;
+  left:1px;
+  bottom: -6px;
+  padding: 5px 8px;
+
+  font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #009dff;
+  color: #ffffffd6;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Schatten für den Button */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Übergangseffekte für Transform und Schatten */
+}
+/* Icon-Styling */
+.icon {
+  position: relative; /* Positionieren Sie das Icon absolut */
+  left: 280px;
+  bottom: 20px;
+  width: 23px;
+  cursor: pointer; /* Ändern Sie den Cursor auf einen Zeiger, um anzuzeigen, dass das Icon anklickbar ist */
+}
+
+
+/* Vergrößerungseffekt und Schatten beim Hover */
+.prediction-button:hover {
+  transform: scale(1.01); /* Vergrößert den Button um 5% */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Dunklerer Schatten beim Hover */
+}
+
+/* Vergrößerungseffekt und Schatten beim Klicken */
+.prediction-button:active {
+  transform: scale(1.1); /* Vergrößert den Button um 10% */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Noch dunklerer Schatten beim Klicken */
+}
+
+/* Fortschrittsleisten-Styling */
+.progress-bar-container {
+  width: 100%;
+  height: 15px;
+  background-color: #e6e3e3;
+  border-radius: 10px;
+  /* margin-top: 5px; */
+  color: #000000;
+  font-size: small;
+  
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #66ff00;
+  border-radius: 4px;
+  transition: width 5s linear; 
+} 
+.additional-text {
+  position: relative; 
+  left: 100px;
+  bottom: 15px;
+  transform: translate(-50%, -50%);
+  color: #2b2929c8;
+}
+
+
+.predicted-price {
+  font-size: 18px; /* Ändere die Schriftgröße */
+  color: #3333339d; /* Ändere die Textfarbe */
+}
+
+.price {
+  font-weight: bold; /* Mache den Preis fett */
+  color: #007bff; /* Ändere die Farbe des Preises */
+}
+
+.error-message {
+  font-size: 16px; /* Ändere die Schriftgröße für Fehlermeldungen */
+  color: red; /* Ändere die Farbe für Fehlermeldungen */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
